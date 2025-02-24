@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>RateVerse - Sign In</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+
+    <body class="bg-gray-100 flex flex-col items-center h-screen">
+        <div style="width: calc(100% - 16px);" class="m-2 p-4 flex items-center justify-center bg-[#3D3A74] rounded-lg">
+            <h1 class="font-extrabold text-4xl text-white">RateVerse</h1>
+        </div>
+
+        <div class="w-full max-w-md p-8 bg-[#E8EAF6] rounded-2xl border-2 border-[#3D3A74] shadow-md">
+            <div class="flex flex-col items-center mb-4">
+                <img src="/public/logo.svg" class="rounded-full mb-2" alt="Logo">
+                <h2 class="text-xl font-bold">WELCOME BACK!</h2>
+                <p class="text-gray-500 text-sm">Please enter your details.</p>
+            </div>
+
+            <form id="loginForm">
+                <input type="email" id="email" placeholder="Email"
+                    class="w-full py-2 px-4 mb-3 border rounded-full focus:ring-2 focus:ring-indigo-500">
+                <input type="password" id="password" placeholder="Password"
+                    class="w-full py-2 px-4 mb-3 border rounded-full focus:ring-2 focus:ring-indigo-500">
+                <a href="#" class="text-xs text-indigo-600 hover:underline float-right mb-3">Forgot password?</a>
+
+                <button type="submit" class="w-full bg-[#3D3A74] text-white p-2 rounded-full hover:bg-indigo-700">Log
+                    in</button>
+            </form>
+
+            <div class="flex items-center my-4">
+                <div class="flex-1 border-t border-gray-300"></div>
+                <p class="px-2 text-sm text-gray-400">or</p>
+                <div class="flex-1 border-t border-gray-300"></div>
+            </div>
+
+            <button class="w-full flex items-center justify-center border p-2 rounded-full bg-white hover:bg-gray-100">
+                <img src="https://developers.google.com/identity/images/g-logo.png" class="w-5 mr-2" alt="Google">Continue
+                with Google
+            </button>
+
+            <p class="text-center text-sm mt-4">Create new account? <a href="signup.html"
+                    class="text-indigo-600 hover:underline">here</a></p>
+        </div>
+
+        <script>
+            document.getElementById('loginForm').addEventListener('submit', function (event) {
+                event.preventDefault();
+                const email = document.getElementById('email').value;
+                const password = document.getElementById('password').value;
+                if (!email || !password) {
+                    alert('Please fill in both fields');
+                } else {
+                    alert('Login successful (mock)');
+                }
+            });
+        </script>
+    </body>
+
+</html>
